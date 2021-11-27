@@ -94,18 +94,18 @@ public class Main {
         int b = 20;
         int modul = a % b;
         System.out.println("Remainder of the division = " + modul);
-/**2.	В переменной x хранится двузначное  целое число.
- Ваша программа должна вывести в консоль  сумму цифр этого числа.
- Пример:*/
+       /**2.	В переменной x хранится двузначное  целое число.
+       Ваша программа должна вывести в консоль  сумму цифр этого числа.
+       Пример:*/
 
-               int sum = 0;
+        int sum = 0;
         int x = 98;
         while (x > 0) {
             int remainderOfDivision = x % 10;
             sum += remainderOfDivision;
-            x/=10;
+            x /= 10;
         }
-        System.out.println("The sum of digit the number = "+sum);
+        System.out.println("The sum of digit the number = " + sum);
 
         /**3.	В переменной x хранится число с дробной частью.
          Ваша программа должна вывести в консоль округленное число x до ближайшего целого.
@@ -135,7 +135,7 @@ public class Main {
         /** task 5 */
         Scanner scan = new Scanner(System.in);
         System.out.println("Enter one month of number !");
-        int one= scan.nextInt();
+        int one = scan.nextInt();
         System.out.println("Enter two month of number !");
         int two = scan.nextInt();
         System.out.println("Enter three month of number !");
@@ -170,83 +170,6 @@ public class Main {
         if (age < 0 || age >= 100) {
             System.out.println("Error! Something went wrong start over!31 ");
 
-        }
-/**7.	Используя сканнер введите 5 целых чисел, распечатайте результаты:
- * a.	Сумма всех чисел.
- * b.	 Четные и нечетные числа.
- * c.	 Наибольшее и наименьшее число.
- * d.	 Числа, которые делятся на 3 или на 9.
- * e.	 Числа, которые делятся на 5 и на 7.
- * f.	 Числа, которые после ввода находились в порядке убыванию.
- * g.	 Числа, которые после ввода находились в порядке возрастания.
- * h.	 * Числа, которые равны полу сумме соседних элементов.
- * i.	Выведите все числа в порядке убывания, возрастания.*/
-        System.out.println(0.0 / 0.0 + 10);
-
-        int numbers[] = new int[5];
-        System.out.println("Enter one number !");
-        numbers[0] = scan.nextInt();
-        System.out.println("Enter two number !");
-        numbers[1] = scan.nextInt();
-        System.out.println("Enter three number !");
-        numbers[2] = scan.nextInt();
-        System.out.println("Enter four number !");
-        numbers[3] = scan.nextInt();
-        System.out.println("Enter five number !");
-        numbers[4] = scan.nextInt();
-        int min = numbers[0];
-        int max = numbers[0];
-        int even[] = new int[5];
-        int odd[] = new int[5];
-        int divisibleByThreeOrNine[] = new int[5];
-        int divisibleByFiveAndSeven[] = new int[5];
-
-        int sumOfNumbers = 0;
-        for (int i = 0; i < numbers.length; i++) {
-            int temp = numbers[i];
-            sumOfNumbers += temp;
-            if (temp % 9 == 0 || temp % 3 == 0) {
-                divisibleByThreeOrNine[i] = temp;
-            }
-            if (temp % 5 == 0 && temp % 7 == 0) {
-                divisibleByFiveAndSeven[i] = temp;
-            }
-
-            if (temp % 2 == 0) {
-                even[i] = temp;
-            } else {
-                odd[i] = temp;
-            }
-            if (max < temp) {
-                max = temp;
-            }
-            if (min > temp) {
-                min = temp;
-            }
-        }
-        System.out.println("The sum of all numbers : " + sumOfNumbers);
-
-        System.out.println("Max number: " + max);
-        System.out.println("Min number: " + min);
-        for (int e = 0; e < even.length; e++) {
-            System.out.println("Even numbers: " + even[e]);
-        }
-        for (int ab = 0; ab < odd.length; ab++) {
-            System.out.println("Odd numbers: " + odd[ab]);
-        }
-        for (int y = 0; y < divisibleByThreeOrNine.length; y++) {
-            System.out.println("The numbers that are divisible by 3 or 9: " + divisibleByThreeOrNine[y]);
-        }
-        for (int f = 0; f < divisibleByFiveAndSeven.length; f++) {
-            System.out.println("The numbers that are divisible by 5 and 7: " + divisibleByFiveAndSeven[f]);
-        }
-        SelectionSort.selectionSort(numbers);
-        for (int t = 0; t < numbers.length; t++) {
-            System.out.println("Sort " + numbers[t]);
-        }
-        SelectionSort.selectionSort(numbers);
-        for (int r = numbers.length - 1; r > 0; r--) {
-            System.out.println("Sort " + numbers[r]);
         }
 
         /**
@@ -311,24 +234,24 @@ public class Main {
 /**10.	 Даны четыре целых числа, одно из которых отлично от трех других, равных между собой.
  *  Определить порядковый номер числа (номер при инициализации), отличного от остальных.*/
         System.out.println("Enter one number identical or unique");
-        int e=scan.nextInt();
+        int e = scan.nextInt();
         System.out.println("Enter two number identical or unique ");
-        int b=scan.nextInt();
+        int b = scan.nextInt();
         System.out.println("Enter  three number identical or unique ");
-        int c=scan.nextInt();
+        int c = scan.nextInt();
         System.out.println("Enter  four number identical or unique ");
-        int d=scan.nextInt();
+        int d = scan.nextInt();
 
-        if (e>b||e<b&&e!=c){
-            System.out.println("Excellent number: "+e);
-        }else if (b>e||b<e&&b!=c){
-            System.out.println("Excellent number: "+b);
+        if (e > b || e < b && e != c) {
+            System.out.println("Excellent number: " + e);
+        } else if (b > e || b < e && b != c) {
+            System.out.println("Excellent number: " + b);
 
-        }else if(c>e||c<e&&c!=b){
-            System.out.println("Excellent number: "+c);
+        } else if (c > e || c < e && c != b) {
+            System.out.println("Excellent number: " + c);
 
-        }else if (d>c||d<c&&d!=b){
-            System.out.println("Excellent number: "+d);
+        } else if (d > c || d < c && d != b) {
+            System.out.println("Excellent number: " + d);
 
         }
 
@@ -366,25 +289,25 @@ public class Main {
          double result =  Math.sqrt(9); // после выполнения result == 3
          */
         System.out.println("Enter point coordinates -'x'");
-        double x=scan.nextDouble();
+        double x = scan.nextDouble();
         System.out.println("Enter point coordinates -'y'");
-        double y=scan.nextDouble();
+        double y = scan.nextDouble();
         System.out.println("Enter  radius circle -'r'");
-        double r=scan.nextDouble();
-        double hypotenuse=Math.sqrt(y*y+x*x);
+        double r = scan.nextDouble();
+        double hypotenuse = Math.sqrt(y * y + x * x);
 
-        if (hypotenuse>r){
+        if (hypotenuse > r) {
             System.out.println("The point does not belong to the circle");
-            System.out.println("x= "+x);
-            System.out.println("y= "+y);
-            System.out.println("r= "+r);
-            System.out.println("Hypotenuse = "+hypotenuse);
-        }else {
+            System.out.println("x= " + x);
+            System.out.println("y= " + y);
+            System.out.println("r= " + r);
+            System.out.println("Hypotenuse = " + hypotenuse);
+        } else {
             System.out.println("The point  belong to the circle");
-            System.out.println("x= "+x);
-            System.out.println("y= "+y);
-            System.out.println("r= "+r);
-            System.out.println("Hypotenuse = "+hypotenuse);
+            System.out.println("x= " + x);
+            System.out.println("y= " + y);
+            System.out.println("r= " + r);
+            System.out.println("Hypotenuse = " + hypotenuse);
         }
 
         /**13.	Нарисуйте объекты в консоли. Ваша программа должна нарисовать что-то.
